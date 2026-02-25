@@ -3,8 +3,11 @@
 > A modern full-stack knowledge sharing platform with AI-powered content generation using Google Gemini API - CDAC 2026 Assignment
 
 [![React](https://img.shields.io/badge/React-18.3-blue.svg)](https://reactjs.org/)
+
 [![Node.js](https://img.shields.io/badge/Node.js-16+-green.svg)](https://nodejs.org/)
+
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-orange.svg)](https://www.mysql.com/)
+
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
@@ -90,9 +93,8 @@ Before you begin, ensure you have the following installed:
 ### Step 1: Clone or Download the Project
 
 ```bash
-# If using Git
-git clone <repository-url>
-cd "Knowledge Sharing Platform"
+https://github.com/AmitPatil8221/Knowledge-Sharing-Platform-with-AI-Assist.git
+cd Knowledge-Sharing-Platform-with-AI-Assist
 
 # Or download and extract the ZIP file
 ```
@@ -105,9 +107,6 @@ mysql -u root -p
 
 # Create database and tables
 source database_schema.sql
-
-# Add summary field (migration)
-source add_summary_field.sql
 ```
 
 **Or manually:**
@@ -172,12 +171,6 @@ npm install
 copy .env.example .env  # Windows
 # OR
 cp .env.example .env    # Linux/Mac
-```
-
-**Configure `.env` file (optional):**
-
-```env
-VITE_API_URL=http://localhost:5000/api
 ```
 
 **Start the frontend server:**
@@ -277,7 +270,7 @@ npm run dev
 ## 📁 Project Structure
 
 ```
-Knowledge Sharing Platform/
+Knowledge-Sharing-Platform-with-AI-Assist/
 │
 ├── Knowledge Sharing Platform Backend/
 │   ├── config/
@@ -353,20 +346,15 @@ Knowledge Sharing Platform/
 
 ---
 
-## 🎨 UI Features
+## 🎨 UI
 
-### Design Elements
-- **Gradient Backgrounds** - Purple to blue gradient theme
-- **Card Animations** - Smooth hover effects and transitions
-- **Responsive Layout** - Mobile-first Bootstrap 5 design
-- **Toast Notifications** - Real-time user feedback
-- **Loading States** - Spinners for async operations
-- **Form Validation** - Client-side validation
+<img width="1899" height="867" alt="Home" src="https://github.com/user-attachments/assets/d62b6062-370f-44f7-b167-71b218dfdac0" />
 
-### Color Scheme
-- Primary: `#6366f1` (Indigo)
-- Secondary: `#8b5cf6` (Purple)
-- Gradient: `linear-gradient(135deg, #667eea 0%, #764ba2 100%)`
+<img width="1898" height="864" alt="Login" src="https://github.com/user-attachments/assets/6b0e0e71-16f2-492a-8960-bd28ae7d7fe4" />
+
+<img width="1897" height="870" alt="Register" src="https://github.com/user-attachments/assets/01e567c7-1e8b-4011-a8fd-a254e4643a07" />
+
+<img width="1899" height="864" alt="Profile" src="https://github.com/user-attachments/assets/dd89b857-b0a4-4cee-8c94-4c025ee1a827" />
 
 ---
 
@@ -454,7 +442,7 @@ npm install
 
 ---
 
-## 📝 Assignment Requirements Checklist
+## 📝 Requirements Checklist
 
 - ✅ User registration and authentication
 - ✅ Create, read, update, delete articles
@@ -474,9 +462,9 @@ npm install
 
 ---
 
-## 👨‍💻 Development Team
+## 👨‍💻 Developed By
 
-**CDAC 2026 Assignment**
+**Amit Vitthal Patil**
 
 ---
 
@@ -486,23 +474,6 @@ This project is licensed under the MIT License.
 
 ---
 
-## 🙏 Acknowledgments
-
-- **Google Gemini AI** - For AI-powered content generation
-- **React Team** - For the amazing frontend framework
-- **Bootstrap** - For responsive UI components
-- **CDAC** - For the assignment opportunity
-
----
-
 ## 📞 Support
 
-For issues or questions:
-1. Check the troubleshooting section
-2. Review the API documentation
-3. Verify environment variables
-4. Check console logs for errors
-
----
-
-**Made with ❤️ for CDAC 2026**
+📧 **amitvpatil8221@gmail.com**
