@@ -3,11 +3,8 @@
 > A modern full-stack knowledge sharing platform with AI-powered content generation using Google Gemini API - CDAC 2026 Assignment
 
 [![React](https://img.shields.io/badge/React-18.3-blue.svg)](https://reactjs.org/)
-
 [![Node.js](https://img.shields.io/badge/Node.js-16+-green.svg)](https://nodejs.org/)
-
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-orange.svg)](https://www.mysql.com/)
-
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
