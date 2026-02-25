@@ -61,7 +61,7 @@ A comprehensive knowledge sharing platform that enables users to create, share, 
 - **Runtime**: Node.js + Express.js
 - **Database**: MySQL 8.0
 - **Authentication**: JWT + bcrypt
-- **AI Integration**: Google Gemini API (@google/generative-ai)
+- **AI Integration**: Google Gemini API (@google/genai)
 - **Security**: CORS, parameterized queries
 
 ### Database Schema
