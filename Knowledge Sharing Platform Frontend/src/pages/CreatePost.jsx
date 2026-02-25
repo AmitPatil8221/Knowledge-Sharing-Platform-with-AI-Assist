@@ -18,6 +18,7 @@ const CreatePost = () => {
   const [showAIModal, setShowAIModal] = useState(false);
   const [aiType, setAiType] = useState('');
   const [loading, setLoading] = useState(false);
+  const [generatingSummary, setGeneratingSummary] = useState(false);
 
   useEffect(() => {
     loadCategories();
@@ -163,12 +164,36 @@ const CreatePost = () => {
                         <button
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
-                          onClick={() => {
-                            setAiType('summary');
-                            setShowAIModal(true);
+                          onClick={async () => {
+                            if (!formData.description) {
+                              toast.error('Please enter description first');
+                              return;
+                            }
+                            setGeneratingSummary(true);
+                            try {
+                              const { aiAPI } = await import('../services/api');
+                              const response = await aiAPI.generate({
+                                prompt: formData.description,
+                                type: 'summary'
+                              });
+                              setFormData({ ...formData, summary: response.data.content });
+                              toast.success('Summary generated successfully!');
+                            } catch (error) {
+                              toast.error('Failed to generate summary');
+                            } finally {
+                              setGeneratingSummary(false);
+                            }
                           }}
+                          disabled={generatingSummary}
                         >
-                          📝 Generate Summary
+                          {generatingSummary ? (
+                            <>
+                              <span className="spinner-border spinner-border-sm me-1"></span>
+                              Generating...
+                            </>
+                          ) : (
+                            '📝 Generate Summary'
+                          )}
                         </button>
                       )}
                     </div>
