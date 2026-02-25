@@ -60,27 +60,53 @@ const PostDetail = () => {
   };
 
   const handleDeleteComment = async (commentId) => {
-    if (!confirm('Delete this comment?')) return;
+    const confirmDelete = () => {
+      toast.promise(
+        commentAPI.delete(commentId).then(() => loadComments()),
+        {
+          pending: 'Deleting comment...',
+          success: 'Comment deleted successfully!',
+          error: 'Failed to delete comment'
+        }
+      );
+    };
 
-    try {
-      await commentAPI.delete(commentId);
-      loadComments();
-      toast.success('Comment deleted successfully!');
-    } catch (error) {
-      toast.error('Failed to delete comment');
-    }
+    toast.warn(
+      <div>
+        <p className="mb-2">Delete this comment?</p>
+        <button className="btn btn-sm btn-danger me-2" onClick={confirmDelete}>Delete</button>
+        <button className="btn btn-sm btn-secondary" onClick={() => toast.dismiss()}>Cancel</button>
+      </div>,
+      {
+        autoClose: false,
+        closeButton: false
+      }
+    );
   };
 
   const handleDeletePost = async () => {
-    if (!confirm('Delete this post?')) return;
+    const confirmDelete = () => {
+      toast.promise(
+        postAPI.delete(postId).then(() => navigate('/')),
+        {
+          pending: 'Deleting post...',
+          success: 'Post deleted successfully!',
+          error: 'Failed to delete post'
+        }
+      );
+    };
 
-    try {
-      await postAPI.delete(postId);
-      toast.success('Post deleted successfully!');
-      navigate('/');
-    } catch (error) {
-      toast.error('Failed to delete post');
-    }
+    toast.warn(
+      <div>
+        <p className="mb-2">Delete this post?</p>
+        <button className="btn btn-sm btn-danger me-2" onClick={confirmDelete}>Delete</button>
+        <button className="btn btn-sm btn-secondary" onClick={() => toast.dismiss()}>Cancel</button>
+      </div>,
+      {
+        autoClose: false,
+        closeButton: false
+      }
+    );
   };
 
   const handleGenerateSummary = async () => {
