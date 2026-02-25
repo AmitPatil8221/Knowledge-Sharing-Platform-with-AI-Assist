@@ -84,6 +84,12 @@ const PostDetail = () => {
   };
 
   const handleGenerateSummary = async () => {
+    if (!user) {
+      toast.info('Please login to generate summary');
+      navigate('/login');
+      return;
+    }
+
     if (!post.description) {
       toast.error('No content to summarize');
       return;
