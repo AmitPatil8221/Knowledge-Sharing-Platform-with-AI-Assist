@@ -325,7 +325,6 @@ Knowledge-Sharing-Platform-with-AI-Assist/
 │   └── vite.config.js               # Vite configuration
 │
 ├── database_schema.sql              # Database schema
-├── add_summary_field.sql            # Summary field migration
 └── README.md                        # This file
 ```
 
